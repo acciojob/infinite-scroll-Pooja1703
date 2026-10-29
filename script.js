@@ -1,4 +1,5 @@
-let list = document.getElementById("list");
+
+let list = document.getElementById("infi-list");
 
 for (let i = 1; i <= 10; i++) {
     let li = document.createElement("li");
@@ -7,7 +8,7 @@ for (let i = 1; i <= 10; i++) {
 }
 
 window.onscroll = function () {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 5) {
         for (let i = 1; i <= 2; i++) {
             let li = document.createElement("li");
             li.innerText = "Item " + (list.children.length + 1);
@@ -15,3 +16,4 @@ window.onscroll = function () {
         }
     }
 };
+
